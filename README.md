@@ -21,3 +21,5 @@ iKunPong
    |--(ikunpong.pyw)
    |--(ikunpong.spec)
 ```
+
+> 学习pygame时的产物，bug肯定有的，也就只是拿来学习pygame用的
