@@ -6,7 +6,7 @@ LEFT&RIGHT键控制板子
 
 ## 游玩说明
 
-1. `build`文件夹和`ikunpong.spec`是`pyinstaller`自动生成的构建文件，不用管它.
+1. `build`和`.spec`文件不用管，构建的文件
 
 2. **请把`img`文件夹和EXE文件放在同一目录，否则无法游玩**
 
