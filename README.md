@@ -8,18 +8,21 @@ LEFT&RIGHT键控制板子
 
 1. `build`和`.spec`文件不用管，构建的文件
 
-2. **请把`img`文件夹和EXE文件放在同一目录，否则无法游玩**
+2. 无需安装pygame，venv内已包含，只需在项目目录中执行以下命令即可运行：
+```shell
+source bin/activate
+```
 
 **正确目录**:
 ```
 iKunPong
-   |--[build]
-   |--[img]
-   |    |--(ball.png)
-   |    |--(paddle.png)
-   |--(ikunpong.exe)
-   |--(ikunpong.pyw)
-   |--(ikunpong.spec)
+    |--[build]
+    |--[img]
+    |    |--(ball.png)
+    |    |--(paddle.png)
+    |--(ikunpong.pyw)
+    |--(ikunpong.spec)
+    |--[...]
 ```
 
 > 学习pygame时的产物，bug肯定有的，也就只是拿来学习pygame用的
