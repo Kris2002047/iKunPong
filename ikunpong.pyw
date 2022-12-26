@@ -32,6 +32,7 @@ bl = {
 loop_expr = True
 key_down = 1
 score = 0
+max_score = 0
 font = pygame.font.SysFont(['Courier New', "Consolas"], 24, bold=True)
 n_speed = 0.01
 
@@ -72,6 +73,8 @@ while loop_expr:
     elif(bl["y"]>=height-50-pd["height"]):
         if(pd["x"]-bl["width"]<=bl["x"]<=pd["x"]+pd["width"]):
             score += 1
+            if score > max_score:
+                max_score = score
             bl["speedy"] = -bl["speedy"]
             if bl["speedx"]<0:
                 bl["speedx"] -= n_speed
@@ -80,13 +83,23 @@ while loop_expr:
             bl["speedy"] -= n_speed
         else:
             score -= 1
+            bl["speedy"] -= n_speed
+            if bl["speedx"]<0:
+                bl["speedx"] += n_speed
+            else:
+                bl["speedx"] -= n_speed
             bl["speedy"] = -bl["speedy"]
     bl["x"] += bl["speedx"]
     bl["y"] += bl["speedy"]
-    text = font.render(f"Score: {score}", True, (255, 255, 255), (0, 0, 0))
+    text_L = font.render(f"Score: {score}", True, (255, 255, 255), (0, 0, 0))
+    text_R = font.render(f"Max: {max_score}", True, (255, 255, 255), (0, 0, 0))
     screen.blit(bl["pic"], (bl["x"], bl["y"]))
     screen.blit(pd["pic"], (pd["x"], pd["y"]))
-    screen.blit(text, (0, 0))
+    screen.blit(text_L, (0, 0))
+    screen.blit(text_R, (500, 0))
     pygame.display.update()
+    if(score<=-1):
+        print(max_score)
+        loop_expr = False
 
 pygame.quit()
