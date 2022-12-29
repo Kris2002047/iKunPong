@@ -11,6 +11,7 @@ LEFT&RIGHT键控制板子
 2. 无需另行安装pygame，venv内已包含，只需在项目目录中执行以下命令即可运行：
 ```shell
 source bin/activate
+python3 ikunpong.pyw
 ```
 
 **正确目录**:
