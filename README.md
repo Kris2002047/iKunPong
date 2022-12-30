@@ -8,9 +8,10 @@ LEFT&RIGHT键控制板子
 
 1. `build`和`.spec`文件不用管，构建的文件
 
-2. 无需另行安装pygame，venv内已包含，只需在项目目录中执行以下命令即可运行：
+2. 运行命令：
 ```shell
 source bin/activate
+pip3 install -r requirements.txt
 python3 ikunpong.pyw
 ```
 
